@@ -50,21 +50,13 @@ Grab the keys from Contentful `Settings > API keys` and paste them in the follow
 
 This project comes with a few handy commands for linting and code fixing. The most important ones are the ones to develop and ship code. You can find the most important commands below.
 
-### `yarn run dev`
+### `yarn run dev` or `yarn start`
 
-Run in the project locally.
+Run the project locally.
 
 ### `yarn run build`
 
 Run a production build into `./public`. The result is ready to be put on any static hosting you prefer.
-
-### `yarn run deploy`
-
-Run a production build into `./public` and publish the site to GitHub pages.
-
-### `yarn run cleanup-repository`
-
-Removes all dependencies, scripts and data from the installation script.
 
 ## Other resources
 
@@ -72,4 +64,4 @@ Removes all dependencies, scripts and data from the installation script.
 
 ## Troubleshooting
 
-- If in the first time you try running `yarn develop` you get an error saying something like `Unknown type "ContentfulFixed".`, don't panic :). That means you need to go to your Contentful space and add a Media (an image). You can know more about this error [here](https://github.com/gatsbyjs/gatsby/issues/16455#issuecomment-520720499)
+- If in the first time you try running `yarn run dev` you get an error saying something like `Unknown type "ContentfulFixed".`, don't panic :). That means you need to go to your Contentful space and add a Media (an image). You can know more about this error [here](https://github.com/gatsbyjs/gatsby/issues/16455#issuecomment-520720499)
