@@ -21,6 +21,31 @@ $ git clone git@github.com:opaulochaves/gatsby-contentful-rich-text.git
 $ yarn install
 ```
 
+### Create env files for development and production environments.
+
+```
+$ cp .env.example .env.development
+$ cp .env.example .env.production
+```
+
+Grab the keys from Contentful `Settings > API keys` and paste them in the following env files
+
+- `.env.development`
+
+  ```yaml
+  CONTENTFUL_SPACE_ID=''
+  CONTENTFUL_ACCESS_TOKEN='' # Content Preview API - access token
+  CONTENTFUL_HOST='preview.contentful.com'
+  ```
+
+- `.env.production`
+
+  ```yaml
+  CONTENTFUL_SPACE_ID=''
+  CONTENTFUL_ACCESS_TOKEN='' # Content Delivery API - access token
+  CONTENTFUL_HOST='cdn.contentful.com'
+  ```
+
 ## Crucial Commands
 
 This project comes with a few handy commands for linting and code fixing. The most important ones are the ones to develop and ship code. You can find the most important commands below.
