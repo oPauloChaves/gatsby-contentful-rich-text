@@ -10,6 +10,19 @@ With Contentful and Gatsby you can connect your favorite static site generator w
 
 To use this project you have to have a Contentful account. If you don't have one yet you can register at [www.contentful.com/sign-up](https://www.contentful.com/sign-up/).
 
+Create a space on Contentful then go to *Content model* and create the following content type:
+
+```
+Content type: Page
+Fields:
+  - title: Short text (required)
+  - slug: Short text (required; unique; appearence slug)
+  - Body Markdown (bodyMarkdown): Long text
+  - Body Rich Text (bodyRichText): Rich text
+```
+
+After go to *Content* and create a `Page` with slug equals to `home`. This page will be the root (`/`) of the site. Feel free to create as many pages you want, just make sure one of them has the slug `home`.
+
 ## Getting started
 
 Install [Yarn](https://yarnpkg.com/en/docs/install) (if you haven't already).
