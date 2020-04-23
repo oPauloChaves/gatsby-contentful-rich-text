@@ -44,3 +44,7 @@ Removes all dependencies, scripts and data from the installation script.
 ## Other resources
 
 - Tutorial video series ["Building a blazing fast website with GatsbyJS and Contentful"](https://www.youtube.com/watch?v=Ek4o40w1tH4&list=PL8KiuH6vpACV-F7jXribe4YveGBhBeG9A) by @Khaledgarbaya
+
+## Troubleshooting
+
+- If in the first time you try running `yarn develop` you get an error saying something like `Unknown type "ContentfulFixed".`, don't panic :). That means you need to go to your Contentful space and add a Media (an image). You can know more about this error [here](https://github.com/gatsbyjs/gatsby/issues/16455#issuecomment-520720499)
