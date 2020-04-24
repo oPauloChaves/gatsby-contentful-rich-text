@@ -1,17 +1,22 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { MDXProvider } from '@mdx-js/react'
+
 import Layout from '../components/layout'
+import Slider from '../components/slider'
+import Hero from '../components/hero'
+
+const shortcodes = { Slider, Hero }
 
 export default function PageTemplate({ data }) {
-  const { page } = data
+  const { bodyMarkdown } = data.page
+
   return (
     <Layout>
-      <h1>{page.title}</h1>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: page.bodyMarkdown.childMarkdownRemark.html,
-        }}
-      />
+      <MDXProvider components={shortcodes}>
+        <MDXRenderer>{bodyMarkdown.childMdx.body}</MDXRenderer>
+      </MDXProvider>
     </Layout>
   )
 }
@@ -19,12 +24,9 @@ export default function PageTemplate({ data }) {
 export const query = graphql`
   query pageQuery($id: String!) {
     page: contentfulPage(id: { eq: $id }) {
-      id
-      slug
-      title
       bodyMarkdown {
-        childMarkdownRemark {
-          html
+        childMdx {
+          body
         }
       }
     }
